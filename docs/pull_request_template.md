@@ -1,22 +1,23 @@
-### Features
--
+## Test Coverage:
 
-### Refactors
--
+   - [ ] 100% test coverage
+   - [ ] Less than 100% test coverage
 
-### Issues and Technical Debt
--
+## Type of change
 
-### Other Comments, Concerns, or Questions
-- 
+   - [ ] New feature
+   - [ ] Bug fix/refactor
 
-### Checklist
-- [ ] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my own code
-- [ ] I have commented my code, particularly in hard-to-understand areas
-- [ ] I have made corresponding changes to the documentation
-- [ ] My changes generate no new warnings
-- [ ] I have added tests that prove my fix is effective or that my feature work
-- [ ] New and existing unit tests pass locally with my changes
-- [ ] I ran Lighthouse and WAVE accessibility audits and fixed errors/warnings
-- [ ] Any dependent changes have been merged and published in downstream modules
+## Changes Made:
+
+    - 
+
+## To Do:
+
+    - 
+
+## Checklist:
+
+   - [ ] My code has no unused/commented out code
+   - [ ] I have reviewed my code
+   - [ ] I have fully tested my code
