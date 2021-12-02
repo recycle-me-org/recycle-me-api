@@ -36,6 +36,7 @@ gem 'geocoder'
 gem "factory_bot_rails"
 gem 'faker'
 gem 'figaro'
+gem 'graphql'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -46,6 +47,7 @@ end
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'graphiql-rails'
 end
 
 group :test do
