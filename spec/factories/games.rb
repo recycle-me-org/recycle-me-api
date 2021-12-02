@@ -1,6 +1,5 @@
 FactoryBot.define do
   factory :game do
-    user { nil }
-    score { 1 }
+    score { 10000 }
   end
 end

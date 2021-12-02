@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+5.times do
+  user = User.create(username: Faker::Games::SuperSmashBros.fighter)
+  5.times do
+    user.games.create(score: Faker::Number.between(from: 1, to: 1000))
+  end
+end
