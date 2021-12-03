@@ -13,7 +13,10 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.7.2-node
-      - image: circleci/postgres:13.4
+      - image: cimg/postgres:13.4
+      environment:
+        POSTGRES_USER: postgres
+        POSTGRES_DB: recycle-me-api-test
     executor: ruby/default
     steps:
       - checkout
