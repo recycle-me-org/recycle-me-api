@@ -17,6 +17,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Add bundle version
+          command: gem install bundler:2.2.30
+      - run:
           name: Build gemfile
           command: bundle install
       - run:
