@@ -28,7 +28,7 @@ jobs:
           command: bundle install
       - run:
           name: Setup DB
-          command: bundle exec rails db:{create,migrate}
+          command: bundle exec rails db:schema:load --trace
       - run:
           name: Run test suite
           command: bundle exec rspec
