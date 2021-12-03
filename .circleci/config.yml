@@ -17,14 +17,11 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Bundler Version
-          command: bundle -v
-      - run:
           name: Build gemfile
           command: bundle install
       - run:
           name: Setup DB
-          command: bundle exec rails db:schema:load --trace
+          command: bundle exec rails db:{create,migrate}
       - run:
           name: Run test suite
           command: bundle exec rspec
