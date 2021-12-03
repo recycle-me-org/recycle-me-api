@@ -18,6 +18,10 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_DB: recycle-me-api-test
     executor: ruby/default
+    environment:
+      PGHOST: 127.0.0.1
+      PGUSER: postgres
+      RAILS_ENV: test
     steps:
       - checkout
       - run:
