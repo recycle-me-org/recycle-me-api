@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.earth911.com/earth911.searchLocations?api_key=0a121ce6ad1237ec&latitude=33.67&longitude=-112.04&material_id=104
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Fri, 03 Dec 2021 02:35:10 GMT
+      Content-Type:
+      - text/javascript
+      Content-Length:
+      - '2790'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization
+      Set-Cookie:
+      - SERVERID=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+      Cache-Control:
+      - private
+    body:
+      encoding: UTF-8
+      string: '{"search_time": "00.628601", "num_results": 12, "result": [{"curbside":
+        false, "description": "eGreen IT Solutions", "distance": 7.0, "longitude":
+        -112.11036529435061, "latitude": 33.587015133686904, "location_type_id": 0,
+        "location_id": "Q1RQNVdbXV9AVQ", "municipal": false}, {"curbside": false,
+        "description": "Maricopa County Transfer Station - Cave Creek", "distance":
+        8.0, "longitude": -112.00889446883295, "latitude": 33.78308129118068, "location_type_id":
+        1, "location_id": "Q1RQNVBfW1xAUg", "municipal": true}, {"curbside": false,
+        "description": "Dollar Self Storage", "distance": 8.7, "longitude": -112.14898264974242,
+        "latitude": 33.582087696648784, "location_type_id": 0, "location_id": "Q1RQNVJbUlxFVw",
+        "municipal": false}, {"curbside": false, "description": "StorQuest Self Storage",
+        "distance": 14.3, "longitude": -112.28964378844705, "latitude": 33.66826054903646,
+        "location_type_id": 0, "location_id": "Q1RQNVJeWVZCUQ", "municipal": false},
+        {"curbside": false, "description": "Big Green Box", "distance": 14.6, "longitude":
+        -112.05072038787749, "latitude": 33.458729883357115, "location_type_id": 0,
+        "location_id": "Q1RQNVdYWFxLUA", "municipal": false}, {"curbside": false,
+        "description": "EZ Money Recycling LLC", "distance": 16.2, "longitude": -112.06561729055089,
+        "latitude": 33.43575427577237, "location_type_id": 0, "location_id": "Q1RQNVVQXltFXQ",
+        "municipal": false}, {"curbside": false, "description": "Earth Protection
+        Services, Inc.", "distance": 16.9, "longitude": -112.16405143975437, "latitude":
+        33.44744261479304, "location_type_id": 0, "location_id": "Q1RQNVJYWVtBUQ",
+        "municipal": false}, {"curbside": false, "description": "Onyx Electronics
+        Recycling", "distance": 17.5, "longitude": -112.18490710349714, "latitude":
+        33.44641129076181, "location_type_id": 0, "location_id": "Q1RQNVBZXVxBXQ",
+        "municipal": false}, {"curbside": false, "description": "Lighting Resources,
+        LLC", "distance": 17.5, "longitude": -112.04882962715357, "latitude": 33.41673207697403,
+        "location_type_id": 0, "location_id": "Q1RQNVdZX1tEVA", "municipal": false},
+        {"curbside": false, "description": "Salt River Pima Maricopa Indian Landfill
+        and Recycling Center", "distance": 18.4, "longitude": -111.78670143588121,
+        "latitude": 33.506228084573465, "location_type_id": 1, "location_id": "Q1RQNVBfWlZDUg",
+        "municipal": true}, {"curbside": false, "description": "City of Tempe Household
+        Products Collection Center", "distance": 18.5, "longitude": -111.91733581317104,
+        "latitude": 33.4227481338229, "location_type_id": 3, "location_id": "Q1RTNVVcUlhB",
+        "municipal": true}, {"curbside": false, "description": "Battery Solutions",
+        "distance": 23.6, "longitude": -111.81603687499191, "latitude": 33.38361511641547,
+        "location_type_id": 0, "location_id": "Q1RQNVdbX1tLVQ", "municipal": false}]}'
+  recorded_at: Fri, 03 Dec 2021 02:35:10 GMT
+recorded_with: VCR 6.0.0
