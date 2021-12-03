@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.earth911.com/earth911.searchMaterials?api_key=0a121ce6ad1237ec&query=battery
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Fri, 03 Dec 2021 02:08:17 GMT
+      Content-Type:
+      - text/javascript
+      Content-Length:
+      - '925'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization
+      Set-Cookie:
+      - SERVERID=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+      Cache-Control:
+      - private
+    body:
+      encoding: UTF-8
+      string: '{"search_time": "00.005853", "num_results": 10, "result": [{"url":
+        "", "exact": false, "description": "Acids", "material_id": 503}, {"url": "",
+        "exact": false, "description": "Alkaline Batteries", "material_id": 104},
+        {"url": "", "exact": false, "description": "Button Cell Batteries", "material_id":
+        127}, {"url": "", "exact": false, "description": "Car Fluids", "material_id":
+        368}, {"url": "", "exact": false, "description": "Lithium Batteries", "material_id":
+        689}, {"url": "", "exact": false, "description": "Lithium-ion Batteries",
+        "material_id": 6}, {"url": "", "exact": false, "description": "Nickel-cadmium
+        Batteries", "material_id": 126}, {"url": "", "exact": false, "description":
+        "Nickel-metal Hydride Batteries", "material_id": 685}, {"url": "", "exact":
+        false, "description": "Nickel-zinc Batteries", "material_id": 687}, {"url":
+        "", "exact": false, "description": "Zinc-carbon Batteries", "material_id":
+        691}]}'
+  recorded_at: Fri, 03 Dec 2021 02:08:17 GMT
+recorded_with: VCR 6.0.0
