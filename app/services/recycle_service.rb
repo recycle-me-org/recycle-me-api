@@ -6,8 +6,8 @@ class RecycleService
       ApiClient.get_data("#{BASE_URL}searchMaterials?api_key=#{ENV['EARTH911_KEY']}&query=#{material}")
     end
 
-    def search_locations(params)
-      ApiClient.get_data("#{BASE_URL}searchLocations?api_key=#{ENV['EARTH911_KEY']}&material_id=#{params[:material_id]}&longitude=#{params[:longitude]}&latitude=#{params[:latitude]}")
+    def search_locations(material_id, lat, long)
+      ApiClient.get_data("#{BASE_URL}searchLocations?api_key=#{ENV['EARTH911_KEY']}&material_id=#{material_id}&longitude=#{long}&latitude=#{lat}")
     end
 
     def get_materials

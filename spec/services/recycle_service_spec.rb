@@ -18,13 +18,11 @@ RSpec.describe RecycleService, :vcr do
     end
 
     it 'returns locations for a material' do
-      params = {
-        material_id: 104,
-        latitude: 33.67,
-        longitude: -112.04
-      }
+      material_id = 104
+      lat = 33.67
+      long = -112.04
 
-      results = RecycleService.search_locations(params)
+      results = RecycleService.search_locations(material_id, lat, long)
 
       expect(results).to be_a(Hash)
 
