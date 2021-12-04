@@ -21,5 +21,13 @@ module Types
     def user(id:)
       User.find(id)
     end
+
+    field :materials, [Types::MaterialType], null: false do
+      argument :search, String, required: true
+    end
+
+    def materials(search:)
+      RecycleFacade.search_materials(search)
+    end
   end
 end
