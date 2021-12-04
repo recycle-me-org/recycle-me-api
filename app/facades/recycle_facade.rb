@@ -7,5 +7,13 @@ class RecycleFacade
         Material.new(r)
       end
     end
+
+    def search_locations(params)
+      locations = RecycleService.search_locations(params)
+
+      locations[:result].map do |r|
+        Location.new(r)
+      end
+    end
   end
 end
