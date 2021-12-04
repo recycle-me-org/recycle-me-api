@@ -15,5 +15,13 @@ class RecycleFacade
         Location.new(r)
       end
     end
+
+    def get_materials
+      materials = RecycleService.get_materials
+      
+      materials[:result].map do |r|
+        MaterialInfo.new(r)
+      end
+    end
   end
 end
