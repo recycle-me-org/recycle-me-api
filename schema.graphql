@@ -1,0 +1,21 @@
+type Game {
+  id: ID!
+  score: Int
+  userId: Int
+}
+
+type Mutation {
+}
+
+type Query {
+  user(id: ID!): User!
+  users: [User!]!
+}
+
+type User {
+  gameCount: Int
+  games: [Game!]
+  highestScore: Int
+  id: ID!
+  username: String
+}
