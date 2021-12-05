@@ -8,7 +8,7 @@ module Queries
         post '/graphql', params: { query: query(search: 'battery')}
 
         json = JSON.parse(response.body)
-        data = json['data']['materials']
+        data = json['data']['searchMaterials']
 
         expect(data).to match_array [
           {"id"=>503, "name"=>"Acids"},
@@ -28,7 +28,7 @@ module Queries
     def query(search:)
       <<~GQL
         query {
-          materials(search: "#{search}") {
+          searchMaterials(search: "#{search}") {
             id
             name
           }
