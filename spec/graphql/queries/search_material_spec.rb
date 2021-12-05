@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-module Queries
+# module Queries
 
   RSpec.describe Material, :vcr, type: :request do
     describe '.resolve' do
@@ -36,4 +36,4 @@ module Queries
       GQL
     end
   end
-end
+# end
