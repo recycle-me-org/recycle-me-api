@@ -22,11 +22,11 @@ module Types
       User.find(id)
     end
 
-    field :materials, [Types::MaterialType], null: false do
+    field :search_materials, [Types::MaterialType], null: false do
       argument :search, String, required: true
     end
 
-    def materials(search:)
+    def search_materials(search:)
       RecycleFacade.search_materials(search)
     end
   end
