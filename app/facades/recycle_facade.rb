@@ -8,11 +8,11 @@ class RecycleFacade
       end
     end
 
-    def search_locations(params)
-      results = Geocoder.search(params[:location])
+    def search_locations(material_id, location)
+      results = Geocoder.search(location)
       lat = results.first.coordinates[0]
       long = results.first.coordinates[1]
-      locations = RecycleService.search_locations(params[:material_id], lat, long)
+      locations = RecycleService.search_locations(material_id, lat, long)
 
       locations[:result].map do |r|
         Location.new(r)

@@ -14,11 +14,10 @@ RSpec.describe RecycleFacade, :vcr do
     end
 
     it 'returns locations for a material' do
-      params = {
-        material_id: 104,
-        location: "80217"
-      }
-      results = RecycleFacade.search_locations(params)
+      material_id = 104
+      location = "80217, United States"
+
+      results = RecycleFacade.search_locations(material_id, location)
 
       expect(results).to be_a(Array)
       expect(results.size).to eq(7)
