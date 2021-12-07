@@ -38,5 +38,11 @@ module Types
     def search_locations(materialId:, location:)
       RecycleFacade.search_locations(materialId, location)
     end
+
+    field :materials, [Types::MaterialInfoType], null: false
+
+    def materials
+      RecycleFacade.get_materials
+    end
   end
 end
