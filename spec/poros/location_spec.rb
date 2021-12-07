@@ -11,6 +11,7 @@ RSpec.describe Location do
     expect(details.name).to eq(data[:description])
     expect(details.hours).to eq(data[:hours])
     expect(details.phone).to eq(data[:phone])
+    expect(details.phone.length).to eq(12)
     expect(details.url).to eq(data[:url])
     expect(details.lat).to eq(data[:latitude])
     expect(details.long).to eq(data[:longitude])
