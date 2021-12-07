@@ -113,7 +113,7 @@ def location_info
        :description=>"SustainAbility Recycling",
        :curbside=>false,
        :hours=>"Tuesday to Thursday: 10am - 6pm; Friday to Sunday: 9am - 3pm",
-       :phone=>"303.424.1719",
+       :phone=>"303-424-1719",
        :address=>"1270 S. Bannock St",
        :notes_public=>"Please visit the website for fee information.",
        :created=>"2018-01-06T22:56:08",
