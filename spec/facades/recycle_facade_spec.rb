@@ -36,12 +36,4 @@ RSpec.describe RecycleFacade, :vcr do
       end
     end
   end
-
-  describe 'getting location details' do
-    it 'returns location details' do
-      details = RecycleFacade.get_location_details('Q1RQNVdbXlpEVA')
-
-      expect(details).to be_a(LocationDetail)
-    end
-  end
 end
