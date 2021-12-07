@@ -2,18 +2,18 @@ require 'rails_helper'
 
 RSpec.describe Location do
   it 'has attributes' do
-    info = {
-                longitude: -112.04,
-                latitude: 33.67,
-                description: "description",
-            }
+    details = Location.new(location_info, 5)
+    data = location_info[:result].first[1]
+    address =   "#{data[:address]}, #{data[:city]}, #{data[:province]} #{data[:postal_code]}"
 
-
-    location = Location.new(info)
-
-    expect(location).to be_a(Location)
-    expect(location.long).to eq(info[:longitude])
-    expect(location.lat).to eq(info[:latitude])
-    expect(location.name).to eq(info[:description])
+    expect(details).to be_a(Location)
+    expect(details.address).to eq(address)
+    expect(details.name).to eq(data[:description])
+    expect(details.hours).to eq(data[:hours])
+    expect(details.phone).to eq(data[:phone])
+    expect(details.url).to eq(data[:url])
+    expect(details.lat).to eq(data[:latitude])
+    expect(details.long).to eq(data[:longitude])
+    expect(details.distance).to eq(5)
   end
 end
