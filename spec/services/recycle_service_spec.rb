@@ -22,14 +22,14 @@ RSpec.describe RecycleService, :vcr do
       lat = 33.67
       long = -112.04
 
-      results = RecycleService.search_locations(material_id, lat, long)
+      locations = RecycleService.search_locations(material_id, lat, long)
 
-      expect(results).to be_a(Hash)
+      expect(locations).to be_a(Hash)
 
-      expect(results[:num_results]).to be_an(Integer)
-      expect(results[:result]).to be_an(Array)
+      expect(locations[:num_results]).to be_an(Integer)
+      expect(locations[:result]).to be_an(Array)
 
-      results[:result].each do |r|
+      locations[:result].each do |r|
         expect(r[:description]).to be_a(String)
         expect(r[:distance]).to be_a(Float)
         expect(r[:latitude]).to be_a(Float)
@@ -38,19 +38,37 @@ RSpec.describe RecycleService, :vcr do
     end
 
     it 'returns list of all materials' do
-      results = RecycleService.get_materials
+      materials = RecycleService.get_materials
 
-      expect(results).to be_a(Hash)
+      expect(materials).to be_a(Hash)
 
-      expect(results[:num_results]).to be_an(Integer)
-      expect(results[:result]).to be_an(Array)
+      expect(materials[:num_results]).to be_an(Integer)
+      expect(materials[:result]).to be_an(Array)
 
-      expect(results[:result].first[:description]).to be_a(String)
-      expect(results[:result].first[:material_id]).to be_an(Integer)
-      expect(results[:result].first[:long_description]).to be_a(String)
-      expect(results[:result].first[:image]).to be_a(String)
-      expect(results[:result].first[:family_ids]).to be_an(Array)
-      expect(results[:result].first[:family_ids]&.first).to be_an(Integer)
+      expect(materials[:result].first[:description]).to be_a(String)
+      expect(materials[:result].first[:material_id]).to be_an(Integer)
+      expect(materials[:result].first[:long_description]).to be_a(String)
+      expect(materials[:result].first[:image]).to be_a(String)
+      expect(materials[:result].first[:family_ids]).to be_an(Array)
+      expect(materials[:result].first[:family_ids]&.first).to be_an(Integer)
+    end
+  end
+
+  describe 'getting location details' do
+    it 'returns location details' do
+      location = RecycleService.get_location_details('Q1RQNVdbXlpEVA')
+
+      expect(location).to be_a(Hash)
+      expect(location[:num_results]).to eq(1)
+      expect(location[:result][:Q1RQNVdbXlpEVA]).to be_a(Hash)
+      expect(location[:result][:Q1RQNVdbXlpEVA][:postal_code]).to be_a(String)
+      expect(location[:result][:Q1RQNVdbXlpEVA][:city]).to be_a(String)
+      expect(location[:result][:Q1RQNVdbXlpEVA][:province]).to be_a(String)
+      expect(location[:result][:Q1RQNVdbXlpEVA][:description]).to be_a(String)
+      expect(location[:result][:Q1RQNVdbXlpEVA][:hours]).to be_a(String)
+      expect(location[:result][:Q1RQNVdbXlpEVA][:phone]).to be_a(String)
+      expect(location[:result][:Q1RQNVdbXlpEVA][:address]).to be_a(String)
+      expect(location[:result][:Q1RQNVdbXlpEVA][:url]).to be_a(String)
     end
   end
 end
