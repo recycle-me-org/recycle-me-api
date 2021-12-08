@@ -42,7 +42,10 @@ module Types
     field :materials, [Types::MaterialInfoType], null: false
 
     def materials
-      RecycleFacade.get_materials
+      Rails.cache.fetch("material-list", expires_in: 7.days) do
+        binding.pry
+        RecycleFacade.get_materials
+      end
     end
   end
 end
