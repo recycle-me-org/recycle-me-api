@@ -43,7 +43,6 @@ module Types
 
     def materials
       Rails.cache.fetch("material-list", expires_in: 7.days) do
-        binding.pry
         RecycleFacade.get_materials
       end
     end
