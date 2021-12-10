@@ -20,12 +20,20 @@ class RecycleFacade
       results = Geocoder.search(location)
       lat = results.first.coordinates[0]
       long = results.first.coordinates[1]
-      locations = RecycleService.search_locations(material_id, lat, long)
+      location_data = RecycleService.search_locations(material_id, lat, long)
 
-      locations[:result].map do |location|
-        details = RecycleService.get_location_details(location[:location_id])
-        Location.new(details, location[:distance])
+      addresses = location_data[:result].map do |address|
+        details = RecycleService.get_location_details(address[:location_id])
+        format_address(details[:result].first[1])
       end
+      addresses.map do |address|
+        id = MapService.get_place_info(address)[:results][0][:place_id]
+        Location.new(id)
+      end
+    end
+
+    def format_address(data)
+      "#{data[:address]}, #{data[:city]}, #{data[:province]} #{data[:postal_code]}"
     end
   end
 end
