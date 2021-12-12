@@ -20,7 +20,7 @@ RSpec.describe RecycleFacade, :vcr do
       results = RecycleFacade.search_locations(material_id, location)
 
       expect(results).to be_a(Array)
-      expect(results.size).to eq(7)
+      expect(results.size).to eq(6)
     end
 
     it 'returns list of all materials' do
