@@ -22,7 +22,7 @@ class RecycleFacade
       long = results.first.coordinates[1]
       location_data = RecycleService.search_locations(material_id, lat, long)
 
-      location_data[:result].map do |location|
+      location_data[:result].filter_map do |location|
         details = MapService.get_place_info(location[:latitude], location[:longitude], location[:description])
 
         Location.new(details[:results][0][:place_id]) unless details[:results].empty?
