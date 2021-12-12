@@ -12,7 +12,7 @@ class RecycleService
     end
 
     def search_locations(material_id, lat, long)
-      ApiClient.get_data("#{BASE_URL}searchLocations?#{KEY}&material_id=#{material_id}&longitude=#{long}&latitude=#{lat}")
+      ApiClient.get_data("#{BASE_URL}searchLocations?#{KEY}&material_id=#{material_id}&longitude=#{long}&latitude=#{lat}&max_results=10")
     end
 
     def get_location_details(location_id)
