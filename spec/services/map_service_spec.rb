@@ -3,8 +3,10 @@ require 'rails_helper'
 RSpec.describe MapService, :vcr do
   describe 'searching for locations' do
     it 'returns a list of place ids' do
-      address = '1600 Amphitheatre Parkway, Mountain View, CA 94043, USA'
-      locations = MapService.get_place_info(address)
+      lat = 33.587015133686904
+      long = -112.11036529435061
+      keyword = "eGreen IT Solutions"
+      locations = MapService.get_place_info(lat, long, keyword)
 
       expect(locations).to be_a(Hash)
 
