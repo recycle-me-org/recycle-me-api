@@ -21,7 +21,6 @@ RSpec.describe RecycleFacade, :vcr do
 
       expect(results).to be_a(Array)
       expect(results.size).to eq(7)
-
     end
 
     it 'returns list of all materials' do
