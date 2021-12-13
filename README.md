@@ -141,7 +141,7 @@ Example response:
 }
 ```
 
-Note: Response is limited to a list of 10 or less.
+Note: Response is limited to a list of 10 results or less.
 
 #### materials query:
 
