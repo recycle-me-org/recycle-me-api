@@ -3,11 +3,9 @@
 
 ## Table of contents
 - [Overview](#overview)
-- [Endpoints](#endpoints)
 - [APIs](#apis)
 - [Endpoint and Queries](#endpoint-and-queries)
 - [Setup](#setup)
-- [Schema](#schema)
 - [Technologies](#technologies)
 - [Contributors](#contributors)
 
@@ -21,9 +19,11 @@ The following are a list of APIs used:
 
 [Earth911 Search API](https://api.earth911.com)
 
+[Google Maps Places API](https://developers.google.com/maps/documentation/places/web-service/overview)
+
 ### Endpoint and Queries
 
-All requests should be made in the form of a POST request to:
+This application uses [GraphQL](https://graphql.org). All requests should be made in the form of a POST request to:
 
 `https://recycle-me-api.herokuapp.com/graphql`
 
@@ -196,9 +196,6 @@ Example response:
 
 ### Setup
 
-### Schema
-![Schema Screenshot](https://user-images.githubusercontent.com/826189/144720415-74ce5429-ad74-4936-bab8-0e249a388ce5.png)
-
 ### Technologies
 
 #### Versions
@@ -255,6 +252,8 @@ Sarah Rudy      | [link](https://www.linkedin.com/in/rudysarah/)      | [link](h
 
 
 <!-- Markdown link & img dfn's -->
+[Schema Screenshot]:      https://user-images.githubusercontent.com/826189/144720415-74ce5429-ad74-4936-bab8-0e249a388ce5.png
+
 [circleci-image]:         https://circleci.com/gh/recycle-me-org/recycle-me-api/tree/main.svg?style=svg
 [circleci-url]:           https://circleci.com/gh/recycle-me-org/recycle-me-api/tree/main
 
