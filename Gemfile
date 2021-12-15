@@ -56,6 +56,7 @@ group :test do
   gem 'simplecov', require: false, group: :test
   gem 'vcr'
   gem 'webmock'
+  gem 'rspec-graphql_matchers'
 end
 
 
