@@ -97,7 +97,14 @@ Example query:
 ```
 {
   searchLocations(materialId: "60", location: "80031, United States") {
-    placeId
+    name
+    long
+    lat
+    hours
+    phone
+    url
+    distance
+    address
   }
 }
 ```
@@ -107,7 +114,14 @@ This query can also accept an address:
 ```
 {
   searchLocations(materialId: "60", location: "1331 17th Street, Denver, CO, United States") {
-    placeId
+    name
+    long
+    lat
+    hours
+    phone
+    url
+    distance
+    address
   }
 }
 ```
@@ -119,22 +133,84 @@ Example response:
     "data": {
         "searchLocations": [
             {
-                "placeId": "ChIJDUMAb0l4bIcR-kRdt3Hxu44"
+                "name": "Metech Recycling",
+                "long": -104.99239601388138,
+                "lat": 39.79466906925231,
+                "hours": "Monday to Friday 8am to 5pm",
+                "phone": "(720) 377-7700",
+                "url": "http://www.metechrecycling.com/",
+                "distance": 5.7,
+                "address": "500 West 53rd Place, Denver, CO 80216"
             },
             {
-                "placeId": "ChIJmeOMlKt_bIcRSNWr3xPBc0M"
+                "name": "SustainAbility Recycling",
+                "long": -104.9898749995828,
+                "lat": 39.6934847226322,
+                "hours": "Tuesday to Thursday: 10am - 6pm; Friday to Sunday: 9am - 3pm",
+                "phone": "303-424-1719",
+                "url": "https://www.sustainability-recycling.com/",
+                "distance": 12.3,
+                "address": "1270 S. Bannock St, Denver, CO 80223"
             },
             {
-                "placeId": "ChIJmUTdgaGEa4cR0UjLWFWvrmQ"
+                "name": "Jefferson County Rooney Road Recycling Center",
+                "long": -105.20175479222218,
+                "lat": 39.711418301619794,
+                "hours": "Please call for an appointment.",
+                "phone": "(303) 316-6262 ",
+                "url": "http://www.rooneyroadrecycling.org/recycling-disposal-services/hazardous-materials/",
+                "distance": 13.6,
+                "address": "151 S Rooney Rd, Golden, CO 80401"
             },
             {
-                "placeId": "ChIJr0Sgq4J9bIcRrJLSkXc-1cg"
+                "name": "Genesis Electronics Recycling",
+                "long": -104.8922429912925,
+                "lat": 39.67996291866711,
+                "hours": "Monday to Friday 9am to 4pm",
+                "phone": "(720) 881-7238",
+                "url": "http://www.genesisrecyclingco.com/",
+                "distance": 15.3,
+                "address": "2045 South Valentia Street  Unit 15, Denver, CO 80231"
             },
             {
-                "placeId": "ChIJ4yxCKDgJbIcRMlVctIgcQnc"
+                "name": "Weld County Household Hazardous Waste South Facility",
+                "long": -104.95068468639585,
+                "lat": 40.08676295320999,
+                "hours": "First and Third Saturday of the month and Friday, 9am to 4pm",
+                "phone": "(970) 304-6415 ",
+                "url": "https://www.weldgov.com",
+                "distance": 16.0,
+                "address": "5500 Hwy 52, Dacono, CO 80514"
             },
             {
-                "placeId": "ChIJEauwzXOHbIcR7gH6VXldVCE"
+                "name": "Whole Foods Market",
+                "long": -104.90163949913264,
+                "lat": 39.65240364872132,
+                "hours": "Monday to Sunday 7am to 10pm",
+                "phone": "(303) 488-2000",
+                "url": "https://www.preserve.eco/",
+                "distance": 16.7,
+                "address": "7400 E Hampden Ave, Denver, CO 80237"
+            },
+            {
+                "name": "Gilpin County Recycling and Electonic Waste Drop-off Facility",
+                "long": -105.46468512440771,
+                "lat": 39.86972654041444,
+                "hours": "Wednesday to Saturday 7am to 2:30pm",
+                "phone": "(303) 582-5004",
+                "url": "http://www.gilpincounty.org/cms/one.aspx?pageId=11605615",
+                "distance": 22.2,
+                "address": "234 Jankowski Drive, Black Hawk, CO 80422"
+            },
+            {
+                "name": "Tree and Styrofoam Recycling (EAS+Y)",
+                "long": -105.31881006976741,
+                "lat": 39.60799941959868,
+                "hours": "January 5th and 12th, 9am-4pm",
+                "phone": "720-536-0069",
+                "url": "http://easy4you.org",
+                "distance": 23.0,
+                "address": "Evergreen Lutheran Church, Evergreen, CO 80439"
             }
         ]
     }
