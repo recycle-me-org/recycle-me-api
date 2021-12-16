@@ -38,6 +38,7 @@ The following are a list of APIs used:
    Add your API key to `config/application.yml`
    ```yaml
    # config/application.yml
+   
    EARTH911_KEY: YOUR_API-KEY
    ```
 6. Test
