@@ -21,7 +21,7 @@ The following are a list of APIs used:
 
 [Google Maps Places API](https://developers.google.com/maps/documentation/places/web-service/overview)
 
-### Endpoint and Queries
+### Endpoints and Queries
 
 This application uses [GraphQL](https://graphql.org). All requests should be made in the form of a POST request to:
 
