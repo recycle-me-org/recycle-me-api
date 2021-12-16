@@ -11,7 +11,7 @@
 
 ### Overview
 
-[Recycle Me]()
+This repo consists of the back-end application for Recycle Me, a GraphQL API built with Ruby on Rails and PostgreSQL. This back-end provides data for recycling materials and recycling locations to a React front-end application: [recycle-me-ui](https://github.com/recycle-me-org/recycle-me-ui). Together, these applications provide a resource for where and how to recycle a variety of materials. Recycle Me was built by a team of students at Turing School of Software & Design for the Module 4 Capstone Project.
 
 ### APIs
 
