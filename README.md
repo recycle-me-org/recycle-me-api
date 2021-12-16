@@ -4,8 +4,8 @@
 ## Table of contents
 - [Overview](#overview)
 - [APIs](#apis)
-- [Endpoint and Queries](#endpoint-and-queries)
 - [Setup](#setup)
+- [Endpoints and Queries](#endpoints-and-queries)
 - [Technologies](#technologies)
 - [Contributors](#contributors)
 
@@ -20,6 +20,30 @@ The following are a list of APIs used:
 [Earth911 Search API](https://api.earth911.com)
 
 [Google Maps Places API](https://developers.google.com/maps/documentation/places/web-service/overview)
+
+### Setup
+
+1. Clone the repo
+   ```sh
+   git clone git@github.com:recycle-me-org/recycle-me-api.git
+   ```
+2. Install gem packages
+   ```sh
+   bundle install
+   ```
+3. Obtain API key from [Earth911 API](https://api.earth911.com/docs/chapter/1/) and install Figaro
+   ```sh
+   bundle exec figaro install
+   ```
+   Add your API key to `config/application.yml`
+   ```yaml
+   # config/application.yml
+   EARTH911_KEY: YOUR_API-KEY
+   ```
+6. Test
+   ```sh
+   bundle exec rspec
+   ```
 
 ### Endpoints and Queries
 
@@ -270,7 +294,6 @@ Example response:
 }
 ```
 
-### Setup
 
 ### Technologies
 
